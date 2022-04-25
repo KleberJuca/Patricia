@@ -20,7 +20,7 @@ class UsuarioService{
 
     async login(data){
         return axios({
-            url: Config.API_URL + "usuario/login",
+            url: Config.API_URL + "/usuario/login",
             method: "POST",
             timeout: Config.TIMEOUT_REQUEST,
             data: data,
@@ -35,7 +35,7 @@ class UsuarioService{
 
     async loginComToken(data){
         return axios({
-            url: Config.API_URL + "usuario/login-token",
+            url: Config.API_URL + "/usuario/login-token",
             method: "POST",
             timeout: Config.TIMEOUT_REQUEST,
             data: data,
