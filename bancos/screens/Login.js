@@ -21,19 +21,7 @@ export default function Login({navigation}) {
       username: email,
       password: password
     }
-    
-    usuarioService.login(data)
-    .then((response) => {
-      setLoading(false)
-      navigation.reset({
-        index: 0,
-        routes: [{name: "Principal"}]
-      })
-    })
-    .catch((error) => {
-      setLoading(false)
-      Alert.alert("Usuário não existe")
-    })
+    navigation.navigate("Principal")
   }
 
   const logarComToken = (token) => {
@@ -132,7 +120,7 @@ const specificStyle = StyleSheet.create({
     backgroundColor: "#fff"
   },
   button: {
-    width: "100%",
+    width: "100",
     marginTop: 10
   }
 })
